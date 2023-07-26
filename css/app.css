@@ -19,6 +19,10 @@ img {
   max-width: 100%;
 }
 
+.no-menu.app .sidebar {
+  margin-left: -20rem;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -105,6 +109,7 @@ i {
 }
 
 .sidebar {
+  transition: margin-left 0.3s ease-out;
   flex: 0 0 20rem;
   background-color: #373737;
   color: #FFFFFF;

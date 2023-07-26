@@ -20,7 +20,11 @@ body {
 img {
     max-width: 100%;
 }
-
+.no-menu.app{
+    .sidebar{
+        margin-left: -20rem;
+    }
+}
 .app {
     display: flex;
     flex-direction: column;
@@ -117,6 +121,7 @@ i {
 }
 
 .sidebar {
+    transition: margin-left .3s ease-out;
     flex: 0 0 20rem;
     background-color: $darkGray;
     color: $white;
@@ -205,71 +210,81 @@ i {
     }
 }
 
-    .content {
-        flex: 1;
-        padding: 1rem;
-        background-color: $gray;
+.content {
+    flex: 1;
+    padding: 1rem;
+    background-color: $gray;
 
-        h2 {
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
     }
+}
 
-    .new-client{
+.new-client {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .field {
+        margin-bottom: 1rem;
+        flex: 0 0 100%;
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        .field{
-            margin-bottom: 1rem;
+        padding: .5rem;
+
+        @include tablet {
+            flex: 0 0 50%;
+
+        }
+
+        &.expand {
             flex: 0 0 100%;
+            justify-content: flex-start;
+        }
+
+        label {
+            flex: 0 0 120px;
+            padding-left: 1rem;
+
+        }
+
+        input[type="text"],
+        textarea {
+            flex: 1;
+            border: none;
+            padding: .5rem 1rem;
+        }
+
+        textarea {
+            height: 10rem;
+        }
+
+        .options {
             display: flex;
-            align-items: center;
             flex-wrap: wrap;
+            flex: 1;
             justify-content: space-between;
-            padding: .5rem;
-            @include tablet{
-                flex: 0 0 50%;
-    
+            align-items: center;
+
+            @include tablet {
+                flex: 0 0 40%;
             }
-            &.expand{
-                flex: 0 0 100%;
-                justify-content: flex-start;
-            }
-            label{
-                flex: 0 0 120px;
-                padding-left: 1rem;
-                
-            }
-            input[type="text"],
-            textarea{
+
+            label {
                 flex: 1;
-                border: none;
-                padding: .5rem 1rem;
+                padding-left: .5rem;
             }
-            textarea{
-                height: 10rem;
-            }
-            .options{
-                display: flex;
-                flex-wrap: wrap;
-                flex: 1;
-                justify-content: space-between;
-                align-items: center;
-                @include tablet {
-                    flex: 0 0 40%;
-                }
-    
-                label{
-                    flex: 1;
-                    padding-left: .5rem;
-                }
-            }
-            &.submit{
-                display: flex;
-                justify-content: flex-end;
-                .button{
-                    @include button($primary);
-                }
+        }
+
+        &.submit {
+            display: flex;
+            justify-content: flex-end;
+
+            .button {
+                @include button($primary);
             }
         }
     }
+}
