@@ -92,3 +92,20 @@ i {
         }
     }
 }
+.main-content{
+    display: flex;
+
+}
+.sidebar{
+    flex: 0 0 20rem;
+    background-color: $darkGray;
+    color: $white;
+    padding: 1rem 2rem 0 2rem;
+.user {
+    display: flex;
+    justify-content: space-between;
+    img{
+    max-width: 60px;
+    }
+}
+}

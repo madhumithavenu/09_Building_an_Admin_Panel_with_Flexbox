@@ -98,3 +98,21 @@ i {
   margin-left: 0.5rem;
   border-radius: 50%;
 }
+
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 20rem;
+  background-color: #373737;
+  color: #FFFFFF;
+  padding: 1rem 2rem 0 2rem;
+}
+.sidebar .user {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar .user img {
+  max-width: 60px;
+}
