@@ -19,6 +19,17 @@ img {
   max-width: 100%;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+i {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
 .header {
   display: flex;
 }
@@ -47,4 +58,43 @@ img {
   .header .site-name .mobile {
     display: none;
   }
+}
+
+.bar {
+  flex: 1;
+  background-color: #005b9f;
+  display: flex;
+  justify-content: space-between;
+}
+.bar .left-content {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.bar .left-content .fa-arrow-right {
+  display: none;
+}
+.bar .right-content {
+  display: flex;
+}
+.bar .right-content .box {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+.bar .right-content .box:hover {
+  background-color: #003f8c;
+}
+.bar .right-content .box a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.bar .right-content .box a span {
+  background-color: #009045;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
 }
