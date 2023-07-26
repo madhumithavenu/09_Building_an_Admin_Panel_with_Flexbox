@@ -12,7 +12,7 @@ html {
 }
 body {
     font-family: $mainFont;
-    min-height: 100%;
+    height: 100%;
 }
 img {
     max-width: 100%;
@@ -94,7 +94,7 @@ i {
 }
 .main-content{
     display: flex;
-
+    flex: 1;
 }
 .sidebar {
     flex: 0 0 20rem;
@@ -153,11 +153,22 @@ i {
                 padding: 1rem;
                 background-color: darken($darkGray, 20%);
                 margin-top: 1rem;
+                li{
+                    margin-bottom: 1rem;
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
             }
             a{
                 color: $white;
                 text-decoration: none;
                 padding: .5rem;
+                transition: padding-left .3s ease, background-color .3s ease-in-out;
+                &:hover{
+                    background-color: $primary;
+                    padding-left: 2rem;
+                }
 
             }
         }

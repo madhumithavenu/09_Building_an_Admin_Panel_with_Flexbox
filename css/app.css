@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  min-height: 100%;
+  height: 100%;
 }
 
 img {
@@ -101,6 +101,7 @@ i {
 
 .main-content {
   display: flex;
+  flex: 1;
 }
 
 .sidebar {
@@ -158,8 +159,19 @@ i {
   background-color: #040404;
   margin-top: 1rem;
 }
+.menu-admin .menu > li ul li {
+  margin-bottom: 1rem;
+}
+.menu-admin .menu > li ul li:last-of-type {
+  margin-bottom: 0;
+}
 .menu-admin .menu > li a {
   color: #FFFFFF;
   text-decoration: none;
   padding: 0.5rem;
+  transition: padding-left 0.3s ease, background-color 0.3s ease-in-out;
+}
+.menu-admin .menu > li a:hover {
+  background-color: #005b9f;
+  padding-left: 2rem;
 }
