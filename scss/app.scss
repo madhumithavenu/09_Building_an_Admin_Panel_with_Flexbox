@@ -17,3 +17,28 @@ body {
 img {
     max-width: 100%;
 }
+.header{
+    display: flex;
+    .site-name{
+        flex: 0 0 5rem;
+        @include desktop{
+            flex: 0 0 20rem;
+        }
+        background-color: $secondary;
+        padding: 1rem;
+        h1{
+            color: $white;
+        }
+        .desktop{
+            display: none;
+            @include desktop{
+                display: block;
+            }
+        }
+        .mobile{
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+}

@@ -18,3 +18,33 @@ body {
 img {
   max-width: 100%;
 }
+
+.header {
+  display: flex;
+}
+.header .site-name {
+  flex: 0 0 5rem;
+  background-color: #003f8c;
+  padding: 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .header .site-name {
+    flex: 0 0 20rem;
+  }
+}
+.header .site-name h1 {
+  color: #FFFFFF;
+}
+.header .site-name .desktop {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .header .site-name .desktop {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header .site-name .mobile {
+    display: none;
+  }
+}
