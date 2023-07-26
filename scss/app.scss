@@ -5,52 +5,66 @@ html {
     @include box-sizing(border-box);
     height: 100%;
 }
+
 *,
 *:after,
 *:before {
-  @include box-sizing(inherit);
+    @include box-sizing(inherit);
 }
+
 body {
     font-family: $mainFont;
     height: 100%;
 }
+
 img {
     max-width: 100%;
 }
+
 .app {
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
+
 i {
     margin: 0 1rem;
     font-size: 1.2rem;
 }
-.header{
+
+.header {
     display: flex;
-    .site-name{
+
+    .site-name {
         flex: 0 0 5rem;
-        @include desktop{
+
+        @include desktop {
             flex: 0 0 20rem;
         }
+
         background-color: $secondary;
         padding: 1rem;
-        h1{
+
+        h1 {
             color: $white;
         }
-        .desktop{
+
+        .desktop {
             display: none;
-            @include desktop{
+
+            @include desktop {
                 display: block;
             }
         }
-        .mobile{
-            @include desktop{
+
+        .mobile {
+            @include desktop {
                 display: none;
             }
         }
     }
 }
+
 .bar {
     flex: 1;
     background-color: $primary;
@@ -70,19 +84,23 @@ i {
 
     .right-content {
         display: flex;
-        .box{
+
+        .box {
             padding: 0 1rem;
             display: flex;
             align-items: center;
-            &:hover{
+
+            &:hover {
                 background-color: $secondary;
             }
-            a{
+
+            a {
                 color: $white;
                 text-decoration: none;
                 display: flex;
                 align-items: center;
-                span{
+
+                span {
                     background-color: $tertiary;
                     padding: .5rem;
                     margin-left: .5rem;
@@ -92,10 +110,12 @@ i {
         }
     }
 }
-.main-content{
+
+.main-content {
     display: flex;
     flex: 1;
 }
+
 .sidebar {
     flex: 0 0 20rem;
     background-color: $darkGray;
@@ -120,7 +140,8 @@ i {
 
     .search {
         margin-top: 1rem;
-        input[type="text"]{
+
+        input[type="text"] {
             width: 100%;
             height: 3rem;
             padding: 1rem;
@@ -129,43 +150,52 @@ i {
         }
     }
 }
-.menu-admin{
+
+.menu-admin {
     margin-top: 1rem;
-    h2{
+
+    h2 {
         text-align: center;
         padding: 1rem;
         font-size: 1.2rem;
     }
-    .menu{
+
+    .menu {
         list-style: none;
         padding: 0;
-        >li{
+
+        >li {
             padding: .5rem;
 
-            &:hover{
-                ul{
+            &:hover {
+                ul {
                     display: block;
                 }
             }
-            ul{
+
+            ul {
                 display: none;
                 list-style: none;
                 padding: 1rem;
                 background-color: darken($darkGray, 20%);
                 margin-top: 1rem;
-                li{
+
+                li {
                     margin-bottom: 1rem;
-                    &:last-of-type{
+
+                    &:last-of-type {
                         margin-bottom: 0;
                     }
                 }
             }
-            a{
+
+            a {
                 color: $white;
                 text-decoration: none;
                 padding: .5rem;
                 transition: padding-left .3s ease, background-color .3s ease-in-out;
-                &:hover{
+
+                &:hover {
                     background-color: $primary;
                     padding-left: 2rem;
                 }
@@ -174,3 +204,46 @@ i {
         }
     }
 }
+
+    .content {
+        flex: 1;
+        padding: 1rem;
+        background-color: $gray;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .new-client {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .field {
+            margin-bottom: 1rem;
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: .5rem;
+
+            @include tablet {
+                flex: 0 0 50%;
+
+            }
+
+            label {
+                flex: 0 0 120px;
+                padding-left: 1rem;
+            }
+
+            input[type="text"],
+            textarea {
+                flex: 1;
+                border: none;
+                padding: .5rem 1rem;
+            }
+        }
+    }

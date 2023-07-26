@@ -175,3 +175,42 @@ i {
   background-color: #005b9f;
   padding-left: 2rem;
 }
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #eeeeee;
+}
+.content h2 {
+  text-align: center;
+}
+
+.new-client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.new-client .field {
+  margin-bottom: 1rem;
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .new-client .field {
+    flex: 0 0 50%;
+  }
+}
+.new-client .field label {
+  flex: 0 0 120px;
+  padding-left: 1rem;
+}
+.new-client .field input[type=text],
+.new-client .field textarea {
+  flex: 1;
+  border: none;
+  padding: 0.5rem 1rem;
+}
