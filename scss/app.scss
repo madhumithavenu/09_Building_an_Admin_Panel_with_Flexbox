@@ -129,3 +129,37 @@ i {
         }
     }
 }
+.menu-admin{
+    margin-top: 1rem;
+    h2{
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    .menu{
+        list-style: none;
+        padding: 0;
+        >li{
+            padding: .5rem;
+
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+            ul{
+                display: none;
+                list-style: none;
+                padding: 1rem;
+                background-color: darken($darkGray, 20%);
+                margin-top: 1rem;
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                padding: .5rem;
+
+            }
+        }
+    }
+}
