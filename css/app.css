@@ -204,6 +204,10 @@ i {
     flex: 0 0 50%;
   }
 }
+.new-client .field.expand {
+  flex: 0 0 100%;
+  justify-content: flex-start;
+}
 .new-client .field label {
   flex: 0 0 120px;
   padding-left: 1rem;
@@ -213,4 +217,40 @@ i {
   flex: 1;
   border: none;
   padding: 0.5rem 1rem;
+}
+.new-client .field textarea {
+  height: 10rem;
+}
+.new-client .field .options {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .new-client .field .options {
+    flex: 0 0 40%;
+  }
+}
+.new-client .field .options label {
+  flex: 1;
+  padding-left: 0.5rem;
+}
+.new-client .field.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.new-client .field.submit .button {
+  background-color: #005b9f;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.new-client .field.submit .button:hover {
+  cursor: pointer;
+  background-color: #003e6c;
 }

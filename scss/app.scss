@@ -215,12 +215,11 @@ i {
         }
     }
 
-    .new-client {
+    .new-client{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
-        .field {
+        .field{
             margin-bottom: 1rem;
             flex: 0 0 100%;
             display: flex;
@@ -228,22 +227,49 @@ i {
             flex-wrap: wrap;
             justify-content: space-between;
             padding: .5rem;
-
-            @include tablet {
+            @include tablet{
                 flex: 0 0 50%;
-
+    
             }
-
-            label {
+            &.expand{
+                flex: 0 0 100%;
+                justify-content: flex-start;
+            }
+            label{
                 flex: 0 0 120px;
                 padding-left: 1rem;
+                
             }
-
             input[type="text"],
-            textarea {
+            textarea{
                 flex: 1;
                 border: none;
                 padding: .5rem 1rem;
+            }
+            textarea{
+                height: 10rem;
+            }
+            .options{
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
+                justify-content: space-between;
+                align-items: center;
+                @include tablet {
+                    flex: 0 0 40%;
+                }
+    
+                label{
+                    flex: 1;
+                    padding-left: .5rem;
+                }
+            }
+            &.submit{
+                display: flex;
+                justify-content: flex-end;
+                .button{
+                    @include button($primary);
+                }
             }
         }
     }
